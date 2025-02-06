@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida, Mi Amor</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f3f3; /* Fondo suave */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Cabeceras */
+        h1, h2, h3 {
+            margin: 20px;
+            color: #d63c7f; /* Color rosado suave */
+        }
+
+        /* Texto principal */
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 80%;
+            margin: 10px auto;
+        }
+
+        /* Estilo para los campos de formulario */
+        input, button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input {
+            width: 80%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #d63c7f;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #a02b62;
+        }
+
+        /* Estilo para el contenedor del formulario */
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el enlace hacia la página principal */
+        .link {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d63c7f;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #a02b62;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenida, Amor</h1>
+    <h2>Por favor, ingresa tus datos para continuar</h2>
+	
+
+    <div class="form-container">
+        <form id="form">
+            <h3>Mi nombre:</h3>
+            <input type="text" id="nombre1" placeholder="Escribe tu nombre completo" required>
+
+            <h3>El nombre de mi amor:</h3>
+            <input type="text" id="nombre2" placeholder="Escribe el nombre de tu amor" required>
+
+            <h3>¿Cuándo nos conocimos?</h3>
+            <input type="date" id="fecha" value="AÑO-MES-DIA" required>
+
+            <br>
+
+            <button type="submit">¡Vamos a la Sorpresa!</button>
+        </form>
+
+        
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let nombre1 = document.getElementById('nombre1').value.trim().toLowerCase();
+            let nombre2 = document.getElementById('nombre2').value.trim().toLowerCase();
+            let fecha = document.getElementById('fecha').value;
+
+            // Los nombres deben coincidir exactamente
+            const nombreCorrecto1 = "ciry soleth pino mena";
+            const nombreCorrecto2 = "cristian palacios mena";
+            
+            // Si los nombres no coinciden, muestra un alerta
+            if (nombre1 !== nombreCorrecto1 || nombre2 !== nombreCorrecto2) {
+                alert("Los nombres no coinciden con los correctos. Por favor, ingresa los nombres correctamente.");
+                return;
+            }
+
+            // Si la fecha no es la correcta, muestra un alerta
+            if (fecha !== "2023-06-19") {
+                alert("La fecha no es correcta. Por favor, asegúrate de ingresar la fecha correcta.");
+                return;
+            }
+
+            // Si todo es correcto, redirige a la página de fotos y mensajes
+            window.location.href = "222.html"; // Cambia a la página donde están las fotos y mensajes
+        });
+    </script>
+
+</body>
+</html>
