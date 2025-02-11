@@ -97,8 +97,14 @@
             <h3> MI NOMBRE :</h3>
             <input type="text" id="nombre2" placeholder="Escribe el nombre de tu amor" required>
 
-            <h3>¿Cuándo nos conocimos?</h3>
+            <h3>¿Cuándo nos conocimOS?</h3>
             <input type="date" id="fecha" value="AÑO-MES-DIA" required>
+
+		 <h3>¿FECHA DE NACIMIENTO DE CRISTIAN?</h3>
+            <input type="date" id="fecha2" value="AÑO-MES-DIA" required>
+
+		 <h3>¿FECHA DE NACIMIENTO DE CIRY ?</h3>
+            <input type="date" id="fecha3" value="AÑO-MES-DIA" required>
 
             <br>
 
@@ -128,6 +134,14 @@
 
             // Si la fecha no es la correcta, muestra un alerta
             if (fecha !== "2023-06-19") {
+                alert("La fecha no es correcta. Por favor, asegúrate de ingresar la fecha correcta.");
+                return;
+            }
+		if (fecha2 !== "2004-01-13") {
+                alert("La fecha no es correcta. Por favor, asegúrate de ingresar la fecha correcta.");
+                return;
+            }
+		if (fecha3 !== "2006-7-7") {
                 alert("La fecha no es correcta. Por favor, asegúrate de ingresar la fecha correcta.");
                 return;
             }
